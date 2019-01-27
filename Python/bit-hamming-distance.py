@@ -14,3 +14,23 @@
 
 # The above arrows point to positions 
 # where the corresponding bits are different.
+
+def hammingDistance(self, x, y):
+        first = str(bin(x))[2:]
+        second = str(bin(y))[2:]
+        
+        len_first = len(first)
+        len_second = len(second)
+        
+        if (len_first < len_second):
+            first = (len_second - len_first) * "0" + first
+        if (len_second < len_first):
+            second = (len_first - len_second) * "0" + second
+            
+        count = 0
+        
+        for i in range(len(first)):
+            if first[i] != second[i]:
+                count += 1
+        
+        return count
