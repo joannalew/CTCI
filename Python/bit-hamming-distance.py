@@ -15,6 +15,10 @@
 # The above arrows point to positions 
 # where the corresponding bits are different.
 
+# Method: convert number to binary, then to string
+# Make the strings the same length
+# Count the number of differences
+# Return the count
 def hammingDistance(self, x, y):
         first = str(bin(x))[2:]
         second = str(bin(y))[2:]
