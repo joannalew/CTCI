@@ -1,3 +1,5 @@
+#
+
 def minDeletionSize(A):
     count = 0
     checker = [0] * len(A[0])

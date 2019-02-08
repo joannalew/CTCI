@@ -1,4 +1,6 @@
 # Stanford CS 106B Backtracking Intro
+# https://www.youtube.com/watch?v=Frr8U5_TTtg
+
 # Print out all Binary Numbers with n number of digits
 # Example: n = 2
 # 	Output: 00, 01, 10, 11
