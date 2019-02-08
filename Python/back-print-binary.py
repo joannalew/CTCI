@@ -1,3 +1,10 @@
+# Stanford CS 106B Backtracking Intro
+# Print out all Binary Numbers with n number of digits
+# Example: n = 2
+# 	Output: 00, 01, 10, 11
+# Example: n = 3
+# 	Output: 000, 001, 010, 011, 100, 101, 110, 111
+
 def printAllBinaryHelper(n, s):
 	if n == 0:
 		print(s)
