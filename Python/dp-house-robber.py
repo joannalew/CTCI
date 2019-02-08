@@ -12,8 +12,33 @@
 #   Output: 12
 #   Rob house #1 ($2), house #3 ($9), house #5 ($1) --> $12
 
-def robber(nums):
+# Example 3: robber([6, 7, 1, 3, 8, 2, 4])
+#   Output: 19
 
+# Example 4: robber([5, 3, 4, 11, 2])
+#   Output: 16
+
+def robberHelper(nums, n):
+    # Base Cases
+    if n == 0:
+        return 0
+    elif n == 1:
+        return nums[0]
+    elif n == 2:
+        return max(nums[0], nums[1])
+    
+    # Memoize
+    memo = [0] * n
+    memo[0] = nums[0]
+    memo[1] = max(nums[0], nums[1])
+
+    for i in range(2, n):
+        memo[i] = max(nums[i] + memo[i - 2], memo[i - 1])
+
+    return memo[-1]
+
+def robber(nums):
+    return robberHelper(nums, len(nums))
 
 def main():
     print(robber([1, 2, 3, 1])) # => 4
