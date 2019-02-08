@@ -18,7 +18,9 @@
 # Example 4: robber([5, 3, 4, 11, 2])
 #   Output: 16
 
-def robberHelper(nums, n):
+def robber(nums):
+    n = len(nums)
+
     # Base Cases
     if n == 0:
         return 0
@@ -36,9 +38,6 @@ def robberHelper(nums, n):
         memo[i] = max(nums[i] + memo[i - 2], memo[i - 1])
 
     return memo[-1]
-
-def robber(nums):
-    return robberHelper(nums, len(nums))
 
 def main():
     print(robber([1, 2, 3, 1])) # => 4
