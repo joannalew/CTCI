@@ -9,13 +9,21 @@
 #   in which he toggles only locker number one hundred, 
 #   how many lockers are open?
 
-
 def toggle_doors():
-    for i in range(1, 10, 2):
-        print(i)
+    arr = [True] * 101
+    for i in range(2, 101):
+        for j in range(i, 101, i):
+            arr[j] = not arr[j]
+    
+    count = 0
+    for i in range(1, 101):
+        if arr[i]:
+            count += 1
+    
+    return count
 
 def main():
-    toggle_doors()
+    print(toggle_doors())
 
 if __name__ == "__main__":
     main()
