@@ -30,8 +30,8 @@ def permutations(s):
 
 
 def main():
-	print set(permutations('ab'))
-	print sorted(set(permutations('stop')))
+	print(set(permutations('ab')))
+	print(sorted(set(permutations('stop'))))
 
 
 if __name__ == "__main__": 
