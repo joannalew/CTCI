@@ -9,8 +9,7 @@
 # Note that we returned a ListNode object ans, such that:
 #   ans.val = 3, ans.next.val = 4, ans.next.next.val = 5, 
 #   and ans.next.next.next = NULL.
-
-If there are two middle nodes, return the second middle node.
+# If there are two middle nodes, return the second middle node.
 
 class ListNode:
     def __init__(self, x):
