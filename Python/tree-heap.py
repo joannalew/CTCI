@@ -11,7 +11,7 @@ class BinHeap:
             if self.heapList[i] < self.heapList[i // 2]:
                 tmp = self.heapList[i // 2]
                 self.heapList[i // 2] = self.heapList[i]
-                self.heapList = tmp
+                self.heapList[i] = tmp
             i = i // 2
     
     def insert(self, k):
@@ -61,6 +61,8 @@ def main():
     heap.buildHeap([33, 14, 17, 27, 18, 19, 9, 21, 5, 11])
     print(heap.heapList)
     heap.insert(7)
+    print(heap.heapList)
+    heap.delMin()
     print(heap.heapList)
 
 if __name__ == "__main__":
