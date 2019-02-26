@@ -12,19 +12,27 @@ def partition(arr, low, high):
     arr[i + 1], arr[high] = arr[high], arr[i + 1]
     return i + 1
 
-def quicksort(arr, low, high):
+def quicksortHelper(arr, low, high):
     if low < high:
         pivot = partition(arr, low, high)
-        quicksort(arr, low, pivot - 1)
-        quicksort(arr, pivot + 1, high)
+        quicksortHelper(arr, low, pivot - 1)
+        quicksortHelper(arr, pivot + 1, high)
+
+def quicksort(arr):
+    quicksortHelper(arr, 0, len(arr) - 1)
 
 def main():
     arr = [1, 9, 5, 3, 7, 4, 0, 8, 2]
-    quicksort(arr, 0, len(arr))
+    quicksort(arr)
     print(arr)
 
-    # print(quicksort([7, 5, 3, 7, 9, 5, 2, 1, 6, 3, 2, 7, 2]))
-    # print(quicksort([1]))
+    arr = [7, 5, 3, 7, 9, 5, 2, 1, 6, 3, 2, 7, 2]
+    quicksort(arr)
+    print(arr)
+
+    arr = [1]
+    quicksort(arr)
+    print(arr)
 
 if __name__ == "__main__":
     main()
