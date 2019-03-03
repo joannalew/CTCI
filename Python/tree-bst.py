@@ -11,9 +11,9 @@ def find(root, target):
     if target == root.value:
         return str(root.value) + ' found'
     elif target < root.value:
-        return root.find(root.left, target)
+        return find(root.left, target)
     else:
-        return root.find(root.right, target)
+        return find(root.right, target)
         
 def main():
     head = Node(2)
